@@ -10,9 +10,7 @@ export const Login = () => {
   const navigate = useNavigate();
 
   if (loading) {
-    return (
-      <span className="loading loading-dots loading-lg flex item-center mx-auto"></span>
-    );
+    return <span className=""></span>;
   }
   if (user) {
     navigate("/betshop");
@@ -42,7 +40,7 @@ export const Login = () => {
         </label>
         <label htmlFor="password">
           Password:
-          <input type="text" name="password" placeholder="password" />
+          <input type="password" name="password" placeholder="password" />
         </label>
         <button type="submit"> Login</button>
       </form>
