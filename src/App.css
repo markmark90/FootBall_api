@@ -1,0 +1,20 @@
+nav {
+  border-radius: 1px solid black;
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.navlink {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: lightblue;
+}
