@@ -26,14 +26,16 @@ export const Livescores = () => {
       {fixtures.length > 0 ? (
         fixtures.map((fixture, index) => (
           <section key={index}>
-            <img src={fixture.teams.home.logo} width={30} alt="team logo" />
+            <img src={fixture.teams.home.logo} width={25} alt="team logo" />
             <div>{fixture.teams.home.name}</div>
-            <div>
-              {fixture.goals.home} : {fixture.goals.away}
+            <div className="result-container">
+              <div>
+                {fixture.goals.home} : {fixture.goals.away}
+              </div>
+              <div>{fixture.fixture.status.elapsed}'</div>
             </div>
             <div>{fixture.teams.away.name}</div>
             <img src={fixture.teams.away.logo} width={25} alt="team logo" />
-            <div>{fixture.fixture.status.elapsed}'</div>
           </section>
         ))
       ) : (

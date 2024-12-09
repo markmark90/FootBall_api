@@ -23,7 +23,6 @@ function App() {
           BetShop
         </NavLink>
       </nav>
-
       <Outlet />
     </div>
   );

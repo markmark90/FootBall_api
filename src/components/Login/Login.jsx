@@ -22,7 +22,7 @@ export const Login = () => {
     const password = e.target.password.value;
     loginUser(email, password)
       .then((result) => {
-        console.log(result);
+        alert("You logged successfuly!");
         navigate("/betshop");
       })
       .catch((error) => console.log(error.message));
@@ -36,11 +36,15 @@ export const Login = () => {
         <h3> Login </h3>
         <label htmlFor="email">
           Email:
-          <input type="text" name="email" placeholder="email" />
+          <input type="text" name="email" placeholder="Unesite e-mail..." />
         </label>
         <label htmlFor="password">
           Password:
-          <input type="password" name="password" placeholder="password" />
+          <input
+            type="password"
+            name="password"
+            placeholder="Unesite lozinku"
+          />
         </label>
         <button type="submit"> Login</button>
       </form>

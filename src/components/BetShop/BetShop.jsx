@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
+import "./BetShop.css";
+
 export const BetShop = () => {
   const { user, logOut, loading } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -9,7 +11,7 @@ export const BetShop = () => {
   const handleSingOut = () => {
     logOut()
       .then(() => {
-        console.log("user logged out successfully");
+        alert("You logged out successfully");
         navigate("/login");
       })
       .catch((error) => console.log(error));
@@ -30,10 +32,14 @@ export const BetShop = () => {
     </>
   );
   return loading ? (
-    <span className="">Loading error</span>
+    <span className="">Loading error!</span>
   ) : (
     <div>
-      <Link onClick={handleSingOut}>Logout</Link>
+      <h1>Betshop</h1>
+      <section></section>
+      <Link className="logout" onClick={handleSingOut}>
+        Logout
+      </Link>
     </div>
   );
 };
