@@ -11,7 +11,6 @@ export const BetShop = () => {
   const handleSingOut = () => {
     logOut()
       .then(() => {
-        alert("You logged out successfully");
         navigate("/login");
       })
       .catch((error) => console.log(error));

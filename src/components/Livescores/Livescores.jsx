@@ -21,11 +21,11 @@ export const Livescores = () => {
     getFixtures();
   }, []);
   return (
-    <>
+    <section>
       <h1>Live Matches</h1>
       {fixtures.length > 0 ? (
         fixtures.map((fixture, index) => (
-          <section key={index}>
+          <article key={index}>
             <img src={fixture.teams.home.logo} width={25} alt="team logo" />
             <div>{fixture.teams.home.name}</div>
             <div className="result-container">
@@ -36,11 +36,11 @@ export const Livescores = () => {
             </div>
             <div>{fixture.teams.away.name}</div>
             <img src={fixture.teams.away.logo} width={25} alt="team logo" />
-          </section>
+          </article>
         ))
       ) : (
         <p className="loading">Loading...</p>
       )}
-    </>
+    </section>
   );
 };

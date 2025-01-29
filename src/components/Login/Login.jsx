@@ -22,7 +22,6 @@ export const Login = () => {
     const password = e.target.password.value;
     loginUser(email, password)
       .then((result) => {
-        alert("You logged successfuly!");
         navigate("/betshop");
       })
       .catch((error) => console.log(error.message));

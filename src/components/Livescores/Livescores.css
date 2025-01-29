@@ -1,4 +1,10 @@
 section {
+  overflow: auto;
+  height: 90vh;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+}
+article {
   display: flex;
   justify-content: space-between;
   max-width: 600px;
@@ -11,7 +17,7 @@ section {
 
 h1 {
   text-align: center;
-  color: #0056b3;
+  color: #b11010;
 }
 
 div {
